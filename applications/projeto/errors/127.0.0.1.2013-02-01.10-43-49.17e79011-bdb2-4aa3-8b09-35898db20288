@@ -1,0 +1,219 @@
+(dp1
+S'output'
+p2
+S'Unable to open included view file: /var/www/web2py_curso/applications/projeto/views/includes/post_template.html'
+p3
+sS'layer'
+p4
+S"'layoutblog.html'"
+p5
+sS'code'
+p6
+S'<!DOCTYPE HTML>\n<html lang="en">\n<head>\n  <meta charset="UTF-8">\n  <title> {{=response.title}}</title>\n  <meta name="description" content="{{=response.meta.description}}">\n  <meta name="keywords" content="{{=response.meta.keyworks}}">\n  <meta name="date" content="2012-01-06">\n\n {{css = URL(a=\'blog\',c=\'static\', f=\'css\')}}\n {{js = URL(a=\'blog\',c=\'static\', f=\'js\')}}\n {{img = URL(a=\'blog\',c=\'static\', f=\'img\')}}\n {{images = URL(a=\'blog\',c=\'static\', f=\'images\')}}\n {{video = URL(a=\'blog\',c=\'static\', f=\'video\')}}\n\n  <link rel="stylesheet" href="{{=css}}/master.css" type="text/css" media="screen" charset="utf-8">\n\n  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css">\n <link rel="stylesheet" href="{{=css}}/bootstrap.min.css">\n\n  <script src="{{=js}}/jquery.js" type="text/javascript" charset="utf-8"></script>\n  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>\n\n  <script src="{{=js}}/bootstrap.min.js"></script>\n\n  {{block head}}\n  {{end}}\n\n   \n</head>\n<body>\n\n  {{include}}\n  <header id="top">\n    {{block header}}\n      <div id="logo">\n        <a href="/">\n           <img src="{{=img}}/logo.png" alt="logo" />\n        </a>\n      </div>\n      <hgroup>\n          <h1>{{=response.title}}</h1>\n          <h2>{{=response.subtitle}}</h2>\n      </hgroup>\n      <nav>\n          <ul>\n            <li><a href="/">Home</a></li>\n            <li><a href="#">item menu</a></li>\n            <li><a href="#">item menu</a></li>\n            <li><a href="#">item menu</a></li>\n          </ul>\n      </nav>\n      {{end}}\n  </header>\n\n  <section id="banner">\n    {{block banner}}\n      <img src="{{=img}}/banner.png" alt="banner"/>\n      <!-- <img src="img/banner2.png" alt="banner" /> -->\n    {{end}}\n  </section>\n \n\n\n<!-- <section id="banner" class="carousel slide">\n  \n  <div class="carousel-inner">\n    <div class="active item"><img src="img/banner.png" alt="banner"/></div>\n    <div class="item"><img src="img/banner2.png" alt="banner" /></div>\n  </div>\n \n  <a class="carousel-control left" href="#banner" data-slide="prev">&lsaquo;</a>\n  <a class="carousel-control right" href="#banner" data-slide="next">&rsaquo;</a>\n</section> -->\n\n\n\n  <aside id="sidebar">\n    {{block sidebar}}\n      <div id="info">\n           <h3>About me</h3>\n           <figure id="photo">\n             <img src="{{=img}}/photo.jpg" alt="photo" />\n             <img src="{{=img}}/photo2.jpg" alt="photo" />\n             <figcaption>Dr Sheldon Cooper</figcaption>\n           </figure>\n           <p><blockquote>Este blog \xc3\xa9 o melhor blog do universo</blockquote></p>\n      </div>\n      <nav>\n          <ul>\n            <li><a href="#contact">contato</a></li>\n            <li><a href="fotos.html">fotos</a></li>\n            <li><a href="admin.html">admin</a></li>\n          </ul>\n      </nav>\n      <section id="tweets" class="side">\n          <header><h3>Twitter feed @TheRealSheldonC</h3></header>\n\n      </section>\n      {{end}}\n  </aside>\n\n\n\n\n  <div class="postcontainer">\n    {{block posts}}\n    <section id="ciencia" class="post">\n        <header>\n           <h1> Artigos cientificos e experimentos</h1>\n        </header>\n\n        \n        {{for post in posts:}}\n             {{include \'includes/post_template.html\'}}\n        {{pass}}\n\n        <!-- \n        {{for post in posts:}}\n            {{post_template(title=post.title, body=post.post_body)}}\n        {{pass}}\n         -->\n\n    </section>\n\n    <section id="games" class="post">\n        <header>\n           <h1> Games e trens!</h1>\n        </header>\n        <article>\n           <header>\n              <h2>Sheldon Cooper inventa Xadrez para 3 pessoas</h2>\n           </header>\n           <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam inonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\n             \n            <video onclick="this.play()"  height="310" width="550" poster="{{=img}}/video.png" controls>\n              <source src="{{=video}}/video13.mp4" type="" media="" />\n              <source src="{{=video}}/video2.mp4" type="" media="" />\n            </video>\n\n\n           </p>\n           <footer>\n              <span>Postado por <b> Sheldon</b> em <time pubdate date="2012-12-22"> 22/12/2012</time>\n           </footer>\n        </article>\n    </section>\n   {{end}}\n  </div>\n\n  <footer>\n    {{block footer}}\n     <form id="contact" method="POST" action="" oninput="idade.value = 28" >\n        <h3>Entre em contato</h3>\n        <label>Nome</label>\n        <input type="text" name="nome" value="" required>\n        <input type="text" name="idade" id="idade" value="" />\n        <input type="file" accept="image/*;capture=camera">\n        <input type="text" class="date">\n        <input type="submit" value="Enviar" />\n     </form>\n\n     <div>\n       Copyright &copy; 2013\n     </div>\n     {{end}}\n  </footer>\n\n<div id="dialog" class="hidden" title="Basic dialog">\n  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the \'x\' icon.</p>\n</div>\n\n</body>\n</html>'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__getslice__'
+p12
+S"<method-wrapper '__getslice__' of exceptions.IOError object>"
+p13
+sS'__str__'
+p14
+S"<method-wrapper '__str__' of exceptions.IOError object>"
+p15
+sS'__reduce__'
+p16
+S'<built-in method __reduce__ of exceptions.IOError object>'
+p17
+sS'__dict__'
+p18
+S'{}'
+p19
+sS'__sizeof__'
+p20
+S'<built-in method __sizeof__ of exceptions.IOError object>'
+p21
+sS'__init__'
+p22
+S"<method-wrapper '__init__' of exceptions.IOError object>"
+p23
+sS'__setattr__'
+p24
+S"<method-wrapper '__setattr__' of exceptions.IOError object>"
+p25
+sS'__reduce_ex__'
+p26
+S'<built-in method __reduce_ex__ of exceptions.IOError object>'
+p27
+sS'__new__'
+p28
+S'<built-in method __new__ of type object>'
+p29
+sS'errno'
+p30
+S'2'
+sS'__format__'
+p31
+S'<built-in method __format__ of exceptions.IOError object>'
+p32
+sS'__class__'
+p33
+S"<type 'exceptions.IOError'>"
+p34
+sS'filename'
+p35
+S"'/var/www/web2py_curso/applications/projeto/views/includes/post_template.html'"
+p36
+sS'__doc__'
+p37
+S"'I/O operation failed.'"
+p38
+sS'__getitem__'
+p39
+S"<method-wrapper '__getitem__' of exceptions.IOError object>"
+p40
+sS'__setstate__'
+p41
+S'<built-in method __setstate__ of exceptions.IOError object>'
+p42
+sS'__getattribute__'
+p43
+S"<method-wrapper '__getattribute__' of exceptions.IOError object>"
+p44
+sS'args'
+p45
+S"(2, 'No such file or directory')"
+p46
+sS'__subclasshook__'
+p47
+S'<built-in method __subclasshook__ of type object>'
+p48
+sS'__unicode__'
+p49
+S'<built-in method __unicode__ of exceptions.IOError object>'
+p50
+sS'strerror'
+p51
+S"'No such file or directory'"
+p52
+sS'__delattr__'
+p53
+S"<method-wrapper '__delattr__' of exceptions.IOError object>"
+p54
+sS'__repr__'
+p55
+S"<method-wrapper '__repr__' of exceptions.IOError object>"
+p56
+sS'__hash__'
+p57
+S"<method-wrapper '__hash__' of exceptions.IOError object>"
+p58
+ssS'evalue'
+p59
+S"[Errno 2] No such file or directory: '/var/www/web2py_curso/applications/projeto/views/includes/post_template.html'"
+p60
+sS'frames'
+p61
+(lp62
+(dp63
+S'file'
+p64
+S'/var/www/web2py_curso/gluon/template.py'
+p65
+sS'dump'
+p66
+(dp67
+S'builtinopen'
+p68
+S'<built-in function open>'
+p69
+sS'fileobj'
+p70
+S'undefined'
+p71
+sS'filepath'
+p72
+S"'/var/www/web2py_curso/applications/projeto/views/includes/post_template.html'"
+p73
+ssS'lnum'
+p74
+I443
+sS'lines'
+p75
+(dp76
+I438
+S'        # Get the path of the file on the system.'
+p77
+sI439
+S'        filepath = self.path and os.path.join(self.path, filename) or filename'
+p78
+sI440
+S''
+sI441
+S'        # try to read the text.'
+p79
+sI442
+S'        try:'
+p80
+sI443
+S"            fileobj = open(filepath, 'rb')"
+p81
+sI444
+S'            text = fileobj.read()'
+p82
+sI445
+S'            fileobj.close()'
+p83
+sI446
+S'        except IOError:'
+p84
+sI447
+S"            self._raise_error('Unable to open included view file: ' + filepath)"
+p85
+ssS'call'
+p86
+S"(self=<gluon.template.TemplateParser object>, filename='includes/post_template.html')"
+p87
+sS'func'
+p88
+S'_get_file_text'
+p89
+sasS'pyver'
+p90
+S'Python 2.7.3: /usr/bin/python'
+p91
+sS'etype'
+p92
+S"<type 'exceptions.IOError'>"
+p93
+sS'date'
+p94
+S'Fri Feb  1 10:43:49 2013'
+p95
+sS'locals'
+p96
+(dp97
+S'self'
+p98
+S'<gluon.template.TemplateParser object>'
+p99
+sS'filepath'
+p100
+S"'/var/www/web2py_curso/applications/projeto/views/includes/post_template.html'"
+p101
+sS'context'
+p102
+S"{'A': <class 'gluon.html.A'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'Blog': <Table blog (id,title,description)>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p103
+sg35
+S"'includes/post_template.html'"
+p104
+sssS'traceback'
+p105
+S'Traceback (most recent call last):\n  File "/var/www/web2py_curso/gluon/template.py", line 443, in _get_file_text\n    fileobj = open(filepath, \'rb\')\nIOError: [Errno 2] No such file or directory: \'/var/www/web2py_curso/applications/projeto/views/includes/post_template.html\'\n'
+p106
+s.
