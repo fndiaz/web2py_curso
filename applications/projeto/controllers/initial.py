@@ -1,11 +1,13 @@
 # coding: utf-8
 
 def home():
-	posts = db(db.post).select()
+	posts = db(db.post).select();
 	print posts
 	response.title = "Titulo home"
 	nome = "fernando"
 	return dict(posts=posts, nome=nome)
+	
+	
 
 
 def contact():

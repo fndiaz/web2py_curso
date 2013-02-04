@@ -1,0 +1,6 @@
+{{extend 'layoutblog.html'}}
+
+{{block posts}}
+	{{=form}}
+
+{{end}}

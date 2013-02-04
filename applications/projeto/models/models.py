@@ -6,7 +6,7 @@ Blog = db.define_table("blog",
 	)
 
 Category = db.define_table("category",
-       Field("name"),
+       Field("name", notnull=True),
 	)
 
 Post = db.define_table("post",

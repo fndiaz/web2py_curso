@@ -7,16 +7,16 @@ def edit():
 def delete():
 	return "delete"
 
-@auth.requires_login()
+@auth.requires(auth.has_membership("admin") or auth.has_membership("editor"))
 def add():
-#	logger.debug("execute funcao add")
-#	logger.info(str(request.vars))
-	logger.info(auth.user)	
-	logger.info(auth.user_id)
-#	try:
-#		1/0
-#	except ZeroDivisionError as erro:
-#		logger.error(str(erro))
-	
-	return SQLFORM(Post).process()
+	form = SQLFORM(db.post)
+
+	if form.process().accepted:
+		response.flash = "Sucesso"
+	elif form.errors:
+		response.flash = "erro"
+	else:
+		response.flash = "Preencha o form"
+
+	return dict(form=form)
 

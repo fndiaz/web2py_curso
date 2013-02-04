@@ -44,3 +44,12 @@ Traceback (most recent call last):
    ^
 SyntaxError: invalid syntax
 
+2013-02-03 12:12:54,552 - web2py.app.blog - INFO - <Storage {'nome': 'sad', 'email': 'scsad', 'mensagem': 'asdsad'}>
+2013-02-03 20:53:07,485 - web2py.app.blog - DEBUG - executando add post
+2013-02-03 21:11:39,796 - web2py.rewrite - ERROR - /var/www/web2py_curso/routes.py has a syntax error and will not be loaded
+Traceback (most recent call last):
+  File "/var/www/web2py_curso/gluon/rewrite.py", line 327, in load
+    exec (data + '\n') in symbols
+  File "<string>", line 5
+SyntaxError: non-keyword arg after keyword arg
+
