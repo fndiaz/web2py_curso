@@ -1,7 +1,7 @@
 # coding: utf-8
 
 def home():
-	posts = db(db.post).select();
+	posts = db(db.post.is_draft == False).select(orderby=~db.post.created_on);
 	print posts
 	response.title = "Titulo home"
 	nome = "fernando"

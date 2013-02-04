@@ -18,4 +18,6 @@ Post = db.define_table("post",
       Field("is_draft", "boolean"),
       Field("tags", "list:string"),
       Field("category", "list:reference category"),
+      Field("created_by", "reference auth_user"),
+      auth.signature
 	)

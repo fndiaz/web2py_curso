@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.SyntaxError'> define_table argument is not a Field or Table: None"
+p3
+sS'layer'
+p4
+S'/var/www/web2py_curso/applications/projeto/models/models.py'
+p5
+sS'code'
+p6
+S'\n\nBlog = db.define_table("blog",\n      Field("title", notnull=True, unique=True),\n      Field("description", "text"),\n\t)\n\nCategory = db.define_table("category",\n       Field("name", notnull=True),\n\t)\n\nPost = db.define_table("post",\n      Field("blog", "reference blog"), # FK\n      Field("title", notnull=True),\n      Field("slug"),\n      Field("post_body", "text"),\n      Field("post_date", "datetime"),\n      Field("is_draft", "boolean"),\n      Field("tags", "list:string"),\n      Field("category", "list:reference category"),\n      auth.signature(),\n\t)\n'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "/var/www/web2py_curso/gluon/restricted.py", line 212, in restricted\n    exec ccode in environment\n  File "/var/www/web2py_curso/applications/projeto/models/models.py", line 21, in <module>\n    auth.signature(),\n  File "/var/www/web2py_curso/gluon/dal.py", line 7186, in define_table\n    table = self.lazy_define_table(tablename,*fields,**args)\n  File "/var/www/web2py_curso/gluon/dal.py", line 7203, in lazy_define_table\n    table = table_class(self, tablename, *fields, **args)\n  File "/var/www/web2py_curso/gluon/dal.py", line 7585, in __init__\n    \'define_table argument is not a Field or Table: %s\' % field)\nSyntaxError: define_table argument is not a Field or Table: None\n'
+p11
+s.

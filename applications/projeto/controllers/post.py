@@ -10,6 +10,7 @@ def delete():
 @auth.requires(auth.has_membership("admin") or auth.has_membership("editor"))
 def add():
 	form = SQLFORM(db.post)
+	print form
 
 	if form.process().accepted:
 		response.flash = "Sucesso"

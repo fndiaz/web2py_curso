@@ -2,8 +2,11 @@
    <header>
       <h2>{{=post.title}}</h2>
    </header>
-   <p> {{=post.post_body}}</p>
+   <p> {{=XML(post.post_body)}}</p><br>
    <footer>
-      <span>Postado por <b> Sheldon</b> em <time pubdate date="2012-12-22"> 22/12/2012</time>
+   	{{usuario = db.executesql('SELECT first_name FROM auth_user WHERE id = %s;' %str(post.created_by))}}
+      <span>Postado por <b> {{=usuario[0][0]}}</b> em {{=prettydate(post.created_on)}}
+      	{{#=post.created_on.strftime("%d/%m/%Y %H:%M")}}
+
    </footer>
 </article>

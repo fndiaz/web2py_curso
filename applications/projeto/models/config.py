@@ -19,7 +19,7 @@ logger = logging.getLogger("web2py.app.blog")
 logger.setLevel(logging.DEBUG)
 
 #auth Rbac
-from gluon.tools import Auth
+from gluon.tools import Auth, prettydate
 
 auth = Auth(db, controller="initial", function="user")
 

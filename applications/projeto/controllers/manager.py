@@ -14,6 +14,7 @@ def category():
 @auth.requires_membership('admin')
 def blogs():
 	form = SQLFORM(db.blog, formstyle='divs', submit_button='Enviar', _class='admform', _id='formblog')
+	
 
 	if form.process().accepted:
 		response.flash = "Sucesso"
@@ -23,3 +24,4 @@ def blogs():
 		response.flash = "Preencha o form"
 
 	return dict(form=form)
+
