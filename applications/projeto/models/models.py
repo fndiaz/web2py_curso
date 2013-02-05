@@ -21,3 +21,6 @@ Post = db.define_table("post",
       Field("created_by", "reference auth_user"),
       auth.signature
 	)
+
+
+
