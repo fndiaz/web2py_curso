@@ -1,0 +1,45 @@
+{{extend "layout.html"}}
+
+<h1> adicione uma postagem </h1>
+
+
+
+{{if form.errors:}}
+<div class="alert alert-danger">
+    <h2> erros </h2>
+ <ul>
+   {{for erro in form.errors:}}
+      <li> {{=erro}} </li>
+   {{pass}}
+ </ul>
+</div>
+{{pass}}
+
+{{=form.custom.begin}}
+<div>
+<h2> Dados basicos </h2>
+{{=form.custom.label.blog}}
+{{=form.custom.widget.blog}}</br>
+{{=form.custom.label.title}}
+{{=form.custom.widget.title}}</br>
+{{=form.custom.label.post_body}}
+{{=form.custom.widget.post_body}}</br>
+{{=form.custom.label.category}}
+{{=form.custom.widget.category}}</br>
+</div>
+
+<hr>
+
+<div>
+<h2> Dados adicionais </h2>
+
+{{=form.custom.label.created_by}}
+{{=form.custom.widget.created_by}}</br>
+{{=form.custom.label.is_draft}}
+{{=form.custom.widget.is_draft}}
+
+</div>
+
+{{=form.custom.submit}}
+{{=form.custom.end}}
+
